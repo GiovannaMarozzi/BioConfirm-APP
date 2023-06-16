@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BootstrapOptions } from '@angular/core';
+
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [

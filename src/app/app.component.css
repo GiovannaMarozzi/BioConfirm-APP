@@ -1,0 +1,40 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  #container{
+    margin-top: 5%;
+  }
