@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+.container-fluid{
+    margin-left: 0%;
+}
+
+body{
+    background: rgb(191,77,117);
+    background: radial-gradient(circle, rgba(191,77,117,1) 26%, rgba(153,52,164,1) 45%, rgba(40,36,36,1) 97%);
+}
+
+#login{
+    margin-left: 34%;
+    margin-top: 10%;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(19, 19, 19, 0.363);
+    border-radius: 10px;
+    color: #ffffff88;
+}
+
+form{
+   padding: 5%;
+}
+
+.form-control{
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+    display: inline-block;
+    flex-direction: column;
+}
+
+.form-check{
+    color: #ffffff88;
+}
+
+#submitLogin{
+    display: inline-flex;
+    text-align: center;
+    margin-left: 80%;
+}
