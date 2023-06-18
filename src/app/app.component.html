@@ -1,34 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Formulário de Registro</title>
-</head>
-
-<body>
-  <div id="container">
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" ng-model="nome" required>
-      
-      <label for="endereco">Endereço:</label>
-      <input type="text" id="endereco" ng-model="endereco" required>
-      
-      <label for="cpf">CPF:</label>
-      <input type="text" id="cpf" ng-model="cpf" required>
-      
-      <label for="rg">RG:</label>
-      <input type="text" id="rg" ng-model="rg" required>
-      
-      <label for="hora-registro">Hora de Registro:</label>
-      <input type="datetime-local" id="hora-registro" ng-model="horaRegistro" required>
-      
-      <button type="submit" ng-click="submitForm()">Enviar</button>
-    </form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/home">Poupa Tempo</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" routerLink="/home">Home</a>
+      <a class="nav-link" routerLink="/cad-biometric">Cadastramento Biométrico</a>
+    </div>
   </div>
-</body>
+  <span class="navbar-text">
+    Sistema de Cadastramento de passageiros
+  </span>
+</nav>
 
-</html>
+<div class="container-router">
+  <router-outlet></router-outlet>
+</div>
