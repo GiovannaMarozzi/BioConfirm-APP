@@ -5,7 +5,7 @@
 .container-login{
     background: rgb(191, 77, 117);
     background: radial-gradient(circle, rgba(191, 77, 117, 1) 26%, rgba(153, 52, 164, 1) 45%, rgba(40, 36, 36, 1) 97%);
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,8 @@ form{
     color: #fff;
     display: inline-block;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-check{

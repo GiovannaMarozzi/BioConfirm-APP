@@ -1,1 +1,125 @@
-<p>cad-biometric works!</p>
+<div id="form-passenger">
+    <form (ngSubmit)="submitForm()" #cadastroForm="ngForm">
+
+        <div class="mb-3">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo"
+                [(ngModel)]="cadastro.nome" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="nome">CPF:</label>
+            <input type="text" id="nome" name="nome" class="form-control" placeholder="CPF" [(ngModel)]="cadastro.nome"
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label for="nome">RG:</label>
+            <input type="text" id="nome" name="nome" class="form-control" placeholder="RG" [(ngModel)]="cadastro.nome"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email:</label>
+            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="cadastro.nome" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" class="form-control" placeholder="Idade"
+                [(ngModel)]="cadastro.idade" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" class="form-control"
+                [(ngModel)]="cadastro.dataNascimento" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço Completo"
+                [(ngModel)]="cadastro.endereco" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="celular">Número de Celular:</label>
+            <input type="tel" id="celular" name="celular" class="form-control" placeholder="Celular"
+                [(ngModel)]="cadastro.celular" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="dataCadastramento">Data de Cadastramento:</label>
+            <input type="date" id="dataCadastramento" name="dataCadastramento" class="form-control"
+                [(ngModel)]="cadastro.dataCadastramento" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="numeroBilhete">Número do Bilhete:</label>
+            <input type="text" id="numeroBilhete" name="numeroBilhete" class="form-control"
+                placeholder="Número do bilhete" [(ngModel)]="cadastro.numeroBilhete" required disabled>
+        </div>
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="confirmacao" name="confirmacao"
+                [(ngModel)]="cadastro.confirmacao" required>
+            <label class="form-check-label" for="inlineCheckbox2">Confirmo os dados informados</label>
+        </div>
+
+        <button type="submit" type="button" data-toggle="collapse" id="confirm" class="btn btn-primary"
+            data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+            [disabled]="!cadastro.confirmacao">Cadastrar Biometria</button>
+
+        <div class="collapse" id="collapseExample">
+            <div id="buttons-biometric" class="d-flex flex-row">
+
+
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked1"
+                    data-toggle="modal" (click)="buttonClicked1 = true" (click)="showModal(1)">Polegar Direito</button>
+
+
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked2"
+                    data-target="#modal2" (click)="buttonClicked2 = true">Indicador Direito</button>
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked3"
+                    (click)="buttonClicked3 = true">Polegar Esquerdo</button>
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked4"
+                    (click)="buttonClicked4 = true">Indicador Esquerdo</button>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </form>
+</div>
