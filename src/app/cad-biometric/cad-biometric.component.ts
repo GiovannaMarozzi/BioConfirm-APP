@@ -15,7 +15,7 @@ export class CadBiometricComponent {
 
   showModal(buttonNumber: number) {
 
-    const modalElement = document.getElementById('exampleModalCenter');
+    const modalElement = document.getElementById('modalBiometric');
     if (modalElement) {
       modalElement.classList.add('show');
       modalElement.style.display = 'block';
@@ -48,7 +48,7 @@ export class CadBiometricComponent {
   }
 
   hideModal() {
-    const modalElement = document.getElementById('exampleModalCenter');
+    const modalElement = document.getElementById('modalBiometric');
     if (modalElement) {
       modalElement.classList.remove('show');
       modalElement.removeAttribute('aria-modal');
