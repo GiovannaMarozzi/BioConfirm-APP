@@ -14,7 +14,8 @@
 
         <div class="mb-3">
             <label for="rg">RG:</label>
-            <input type="text" id="rg" name="rg" class="form-control" placeholder="RG" [(ngModel)]="cadastro.rg" required>
+            <input type="text" id="rg" name="rg" class="form-control" placeholder="RG" [(ngModel)]="cadastro.rg"
+                required>
         </div>
 
         <div class="form-group">
@@ -64,7 +65,7 @@
                 [(ngModel)]="cadastro.confirmacao" required>
             <label class="form-check-label" for="confirmacao">Confirmo os dados informados</label>
         </div>
-        
+
         <button type="submit" id="confirm" class="btn btn-primary" data-toggle="collapse" data-target="#collapse"
             aria-expanded="false" aria-controls="collapse" [disabled]="!cadastro.confirmacao">
             Cadastrar Biometria
@@ -72,14 +73,14 @@
 
         <div class="collapse" id="collapse">
             <div id="buttons-biometric" class="d-flex flex-row">
-                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked1" data-toggle="modal"
-                    (click)="buttonClicked1 = true; showModal(1)">Polegar Direito</button>
-                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked2" data-toggle="modal"
-                    (click)="buttonClicked2 = true; showModal(2)">Indicador Direito</button>
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked1"
+                    data-toggle="modal" (click)="buttonClicked1 = true; showModal(1)">Polegar Direito</button>
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked2"
+                    data-toggle="modal" (click)="buttonClicked2 = true; showModal(2)">Indicador Direito</button>
                 <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked3"
-                    (click)="buttonClicked3 = true; showModal(3)">Polegar Esquerdo</button>
+                    data-toggle="modal" (click)="buttonClicked3 = true; showModal(3)">Polegar Esquerdo</button>
                 <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked4"
-                    (click)="buttonClicked4 = true; showModal(4)">Indicador Esquerdo</button>
+                    data-toggle="modal" (click)="buttonClicked4 = true; showModal(4)">Indicador Esquerdo</button>
             </div>
         </div>
 
@@ -104,7 +105,8 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" [disabled]="!cadastroForm.valid">Enviar</button>
-
+        <button type="submit" class="btn btn-primary" [disabled]="!cadastroForm.valid || !biometricsCompleted">
+            Salvar
+        </button>
     </form>
 </div>
