@@ -1,5 +1,6 @@
 <div id="form-passenger">
     <form (ngSubmit)="submitForm()" #cadastroForm="ngForm">
+        <h2>Cadastramento Biométrico</h2>
         <div class="mb-3">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo"
@@ -95,7 +96,6 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- Modal body content here -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" (click)="hideModal()">Close</button>
@@ -104,6 +104,7 @@
                 </div>
             </div>
         </div>
+        <br>
 
         <button type="submit" class="btn btn-primary" [disabled]="!cadastroForm.valid || !biometricsCompleted">
             Salvar
