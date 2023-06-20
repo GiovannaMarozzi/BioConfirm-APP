@@ -1,6 +1,7 @@
 <div id="newPassenger">
-    <form id="formCad">
+    <form #formCad="ngForm" (ngSubmit)="onSubmit()">
         <h2>Cadastro de Novo Usuário</h2>
+        
     <div class="form-group">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo">
