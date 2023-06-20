@@ -13,14 +13,14 @@
         </div>
 
         <div class="mb-3">
-            <label for="rd">RG:</label>
-            <input type="text" id="rg" name="g" class="form-control" placeholder="RG" [(ngModel)]="cadastro.rg"
-                required>
+            <label for="rg">RG:</label>
+            <input type="text" id="rg" name="rg" class="form-control" placeholder="RG" [(ngModel)]="cadastro.rg" required>
         </div>
 
         <div class="form-group">
-            <label for="FormControlInput1">Email:</label>
-            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="cadastro.email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                [(ngModel)]="cadastro.email" required>
         </div>
 
         <div class="mb-3">
@@ -62,9 +62,9 @@
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="confirmacao" name="confirmacao"
                 [(ngModel)]="cadastro.confirmacao" required>
-            <label class="form-check-label" for="inlineCheckbox2">Confirmo os dados informados</label>
+            <label class="form-check-label" for="confirmacao">Confirmo os dados informados</label>
         </div>
-
+        
         <button type="submit" id="confirm" class="btn btn-primary" data-toggle="collapse" data-target="#collapse"
             aria-expanded="false" aria-controls="collapse" [disabled]="!cadastro.confirmacao">
             Cadastrar Biometria
@@ -104,7 +104,7 @@
             </div>
         </div>
 
+        <button type="submit" class="btn btn-primary" [disabled]="!cadastroForm.valid">Enviar</button>
+
     </form>
-
-
 </div>
