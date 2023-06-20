@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-cad-biometric',
   templateUrl: './cad-biometric.component.html',
@@ -12,9 +11,9 @@ export class CadBiometricComponent {
   buttonClicked2 = false;
   buttonClicked3 = false;
   buttonClicked4 = false;
+  modalOpen = false;
 
   showModal(buttonNumber: number) {
-
     const modalElement = document.getElementById('modalBiometric');
     if (modalElement) {
       modalElement.classList.add('show');
@@ -39,24 +38,33 @@ export class CadBiometricComponent {
         break;
     }
 
-    const modalBackdropElement = document.getElementById('modalBackdrop');
+    const modalBackdropElement = document.getElementsByClassName('modal-backdrop')[0];
     if (modalBackdropElement) {
       modalBackdropElement.addEventListener('click', () => {
         this.hideModal();
       });
     }
+    this.modalOpen = true;
   }
 
   hideModal() {
     const modalElement = document.getElementById('modalBiometric');
     if (modalElement) {
       modalElement.classList.remove('show');
+      modalElement.style.display = 'none';
       modalElement.removeAttribute('aria-modal');
     }
+
+    const modalBackdropElement = document.getElementsByClassName('modal-backdrop')[0];
+    if (modalBackdropElement) {
+      modalBackdropElement.removeEventListener('click', () => {
+        this.hideModal();
+      });
+    }
+    this.modalOpen = false;
   }
 
-
-submitForm() {
-
-}
+  submitForm() {
+    // Lógica para o envio do formulário
+  }
 }

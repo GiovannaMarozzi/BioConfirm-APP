@@ -1,6 +1,5 @@
 <div id="form-passenger">
     <form (ngSubmit)="submitForm()" #cadastroForm="ngForm">
-
         <div class="mb-3">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Completo"
@@ -8,20 +7,20 @@
         </div>
 
         <div class="mb-3">
-            <label for="nome">CPF:</label>
-            <input type="text" id="nome" name="nome" class="form-control" placeholder="CPF" [(ngModel)]="cadastro.nome"
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" [(ngModel)]="cadastro.cpf"
                 required>
         </div>
 
         <div class="mb-3">
-            <label for="nome">RG:</label>
-            <input type="text" id="nome" name="nome" class="form-control" placeholder="RG" [(ngModel)]="cadastro.nome"
+            <label for="rd">RG:</label>
+            <input type="text" id="rg" name="g" class="form-control" placeholder="RG" [(ngModel)]="cadastro.rg"
                 required>
         </div>
 
         <div class="form-group">
             <label for="FormControlInput1">Email:</label>
-            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="cadastro.nome" required>
+            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="cadastro.email" required>
         </div>
 
         <div class="mb-3">
@@ -66,47 +65,46 @@
             <label class="form-check-label" for="inlineCheckbox2">Confirmo os dados informados</label>
         </div>
 
-        <button type="submit" type="button" data-toggle="collapse" id="confirm" class="btn btn-primary"
-            data-target="#collapse" aria-expanded="false" aria-controls="collapse"
-            [disabled]="!cadastro.confirmacao">Cadastrar Biometria</button>
+        <button type="submit" id="confirm" class="btn btn-primary" data-toggle="collapse" data-target="#collapse"
+            aria-expanded="false" aria-controls="collapse" [disabled]="!cadastro.confirmacao">
+            Cadastrar Biometria
+        </button>
 
         <div class="collapse" id="collapse">
             <div id="buttons-biometric" class="d-flex flex-row">
-
-                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked1"
-                    data-toggle="modal" (click)="buttonClicked1 = true" (click)="showModal(1)">Polegar Direito</button>
-
-
-                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked2"
-                    data-target="#modal2" (click)="buttonClicked2 = true">Indicador Direito</button>
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked1" data-toggle="modal"
+                    (click)="buttonClicked1 = true; showModal(1)">Polegar Direito</button>
+                <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked2" data-toggle="modal"
+                    (click)="buttonClicked2 = true; showModal(2)">Indicador Direito</button>
                 <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked3"
-                    (click)="buttonClicked3 = true">Polegar Esquerdo</button>
+                    (click)="buttonClicked3 = true; showModal(3)">Polegar Esquerdo</button>
                 <button type="button" class="btn btn-outline-secondary biometric" [disabled]="buttonClicked4"
-                    (click)="buttonClicked4 = true">Indicador Esquerdo</button>
+                    (click)="buttonClicked4 = true; showModal(4)">Indicador Esquerdo</button>
             </div>
         </div>
 
-        <!-- Modal -->
         <div class="modal fade" id="modalBiometric" tabindex="-1" role="dialog" aria-labelledby="modalBiometricTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalBiometricTitle">Modal Title</h5>
-                    <button type="button" class="close" aria-label="Close" (click)="hideModal()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Modal body content here -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" (click)="hideModal()">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBiometricTitle">Modal Title</h5>
+                        <button type="button" class="close" aria-label="Close" (click)="hideModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Modal body content here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="hideModal()">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </form>
+
+
 </div>
