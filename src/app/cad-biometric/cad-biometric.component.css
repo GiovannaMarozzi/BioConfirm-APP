@@ -61,14 +61,17 @@
     margin-left: 1%;
 }
 
-/* #modal-biometric {
-    padding: 10%;
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px
-} */
-
 #buttons-biometric{
     display: flex;
     margin-left: 25px;
 }
+
+#collapse{
+    background-color: #f2f2f2;
+}
+
+.show {
+    display: block !important;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
